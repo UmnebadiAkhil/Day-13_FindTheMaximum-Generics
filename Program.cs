@@ -6,7 +6,7 @@ using System.Text;
 bool flag = true;
 while (flag)
 {
-    Console.WriteLine("Enter the Program that want to be executed : \n 1. Find Maximum Integer \n 2. Find Maximum Float \n 3. Maximum String \n 4. Reactor-1&2 \n 5. Exit");
+    Console.WriteLine("Enter the Program that want to be executed : \n 1. Find Maximum Integer \n 2. Find Maximum Float \n 3. Maximum String \n 4. Reactor-1&2 \n 5. MaximumMethod \n 6. Exit");
     int option = Convert.ToInt32(Console.ReadLine());
     switch (option)
     {
@@ -43,6 +43,11 @@ while (flag)
             Console.WriteLine("Maximum Number is : " + result2);
             break;
         case 5:
+            int[] arr = { 11, 34, 54, 55, 54 };
+            MaximumMethod<int> maximumMethod = new MaximumMethod<int>(arr);
+            maximumMethod.PrintMaxValue();
+            break;
+        case 6:
             flag = false;
             break;
     }
