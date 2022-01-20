@@ -6,7 +6,7 @@ using System.Text;
 bool flag = true;
 while (flag)
 {
-    Console.WriteLine("Enter the Program that want to be executed : \n 1. Find Maximum Integer \n 2. Find Maximum Float \n 3. Maximum String \n 4. Exit");
+    Console.WriteLine("Enter the Program that want to be executed : \n 1. Find Maximum Integer \n 2. Find Maximum Float \n 3. Maximum String \n 4. Reactor-1&2 \n 5. Exit");
     int option = Convert.ToInt32(Console.ReadLine());
     switch (option)
     {
@@ -35,6 +35,14 @@ while (flag)
             Console.WriteLine("The Largest String is : " + largest);
             break;
         case 4:
+            Console.WriteLine("Enter firstvalue, secondvalue, thirdvalue  : ");
+            int firstvalue = Convert.ToInt32(Console.ReadLine());
+            int secondvalue = Convert.ToInt32(Console.ReadLine());
+            int thirdvalue = Convert.ToInt32(Console.ReadLine());
+            int result2 = FindMaximumNumber<int>.MaximumIntNumbers(firstvalue, secondvalue, thirdvalue);
+            Console.WriteLine("Maximum Number is : " + result2);
+            break;
+        case 5:
             flag = false;
             break;
     }
